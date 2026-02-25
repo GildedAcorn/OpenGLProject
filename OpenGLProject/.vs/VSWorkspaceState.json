@@ -12,8 +12,9 @@
     ]
   },
   "ExpandedNodes": [
-    ""
+    "",
+    "\\source"
   ],
-  "SelectedNode": "\\C:\\Users\\egden\\Desktop\\OpenGLProject\\OpenGLProject\\CMakeLists.txt\\OpenGLProject.exe\\C:\\Users\\egden\\Desktop\\OpenGLProject\\OpenGLProject\\header",
+  "SelectedNode": "\\source\\main.cpp",
   "PreviewInSolutionExplorer": false
 }

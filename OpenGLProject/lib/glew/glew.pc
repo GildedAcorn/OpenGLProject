@@ -1,6 +1,6 @@
-prefix=C:/Users/egden/Desktop/OpenGLProject/OpenGLProject/out/install/x64-debug
+prefix=E:/GitHub Repos/OpenGLProject/OpenGLProject/out/install/x64-debug
 exec_prefix=${prefix}
-libdir=C:/Users/egden/Desktop/OpenGLProject/OpenGLProject/out/install/x64-debug/lib
+libdir=E:/GitHub Repos/OpenGLProject/OpenGLProject/out/install/x64-debug/lib
 includedir=${prefix}/include
 
 Name: glew

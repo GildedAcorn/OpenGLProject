@@ -10,7 +10,7 @@ set(PROJECT_SOURCE_FILES
 
 # Add the application
 include_directories(source)
-add_executable (${PROJECT_NAME} ${PROJECT_SOURCE_FILES})
+add_executable(${PROJECT_NAME} ${PROJECT_SOURCE_FILES})
 
 # Add GLFW library
 add_subdirectory(lib/glfw-3.4 

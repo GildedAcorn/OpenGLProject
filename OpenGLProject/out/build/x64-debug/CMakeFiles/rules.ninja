@@ -121,7 +121,7 @@ rule C_STATIC_LIBRARY_LINKER__glew_s_Debug
 # Rule for re-running cmake.
 
 rule RERUN_CMAKE
-  command = "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" --regenerate-during-build -SC:\Users\egden\Desktop\OpenGLProject\OpenGLProject -BC:\Users\egden\Desktop\OpenGLProject\OpenGLProject\out\build\x64-debug
+  command = "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" --regenerate-during-build -S"E:\GitHub Repos\OpenGLProject\OpenGLProject" -B"E:\GitHub Repos\OpenGLProject\OpenGLProject\out\build\x64-debug"
   description = Re-running CMake...
   generator = 1
 

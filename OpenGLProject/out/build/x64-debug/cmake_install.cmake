@@ -1,8 +1,8 @@
-# Install script for directory: C:/Users/egden/Desktop/OpenGLProject/OpenGLProject
+# Install script for directory: E:/GitHub Repos/OpenGLProject/OpenGLProject
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Users/egden/Desktop/OpenGLProject/OpenGLProject/out/install/x64-debug")
+  set(CMAKE_INSTALL_PREFIX "E:/GitHub Repos/OpenGLProject/OpenGLProject/out/install/x64-debug")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -34,15 +34,15 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("C:/Users/egden/Desktop/OpenGLProject/OpenGLProject/out/build/x64-debug/glfw_build/cmake_install.cmake")
-  include("C:/Users/egden/Desktop/OpenGLProject/OpenGLProject/out/build/x64-debug/glew_build/cmake_install.cmake")
+  include("E:/GitHub Repos/OpenGLProject/OpenGLProject/out/build/x64-debug/glfw_build/cmake_install.cmake")
+  include("E:/GitHub Repos/OpenGLProject/OpenGLProject/out/build/x64-debug/glew_build/cmake_install.cmake")
 
 endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
 if(CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "C:/Users/egden/Desktop/OpenGLProject/OpenGLProject/out/build/x64-debug/install_local_manifest.txt"
+  file(WRITE "E:/GitHub Repos/OpenGLProject/OpenGLProject/out/build/x64-debug/install_local_manifest.txt"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()
 if(CMAKE_INSTALL_COMPONENT)
@@ -58,6 +58,6 @@ else()
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "C:/Users/egden/Desktop/OpenGLProject/OpenGLProject/out/build/x64-debug/${CMAKE_INSTALL_MANIFEST}"
+  file(WRITE "E:/GitHub Repos/OpenGLProject/OpenGLProject/out/build/x64-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()

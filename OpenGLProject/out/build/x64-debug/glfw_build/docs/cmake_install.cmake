@@ -1,8 +1,8 @@
-# Install script for directory: C:/Users/egden/Desktop/OpenGLProject/OpenGLProject/lib/glfw-3.4/docs
+# Install script for directory: E:/GitHub Repos/OpenGLProject/OpenGLProject/lib/glfw-3.4/docs
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Users/egden/Desktop/OpenGLProject/OpenGLProject/out/install/x64-debug")
+  set(CMAKE_INSTALL_PREFIX "E:/GitHub Repos/OpenGLProject/OpenGLProject/out/install/x64-debug")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -35,6 +35,6 @@ endif()
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
 if(CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "C:/Users/egden/Desktop/OpenGLProject/OpenGLProject/out/build/x64-debug/glfw_build/docs/install_local_manifest.txt"
+  file(WRITE "E:/GitHub Repos/OpenGLProject/OpenGLProject/out/build/x64-debug/glfw_build/docs/install_local_manifest.txt"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()

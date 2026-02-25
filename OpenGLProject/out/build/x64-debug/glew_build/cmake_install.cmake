@@ -1,8 +1,8 @@
-# Install script for directory: C:/Users/egden/Desktop/OpenGLProject/OpenGLProject/lib/glew/build/cmake
+# Install script for directory: E:/GitHub Repos/OpenGLProject/OpenGLProject/lib/glew/build/cmake
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Users/egden/Desktop/OpenGLProject/OpenGLProject/out/install/x64-debug")
+  set(CMAKE_INSTALL_PREFIX "E:/GitHub Repos/OpenGLProject/OpenGLProject/out/install/x64-debug")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -33,24 +33,24 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "C:/Users/egden/Desktop/OpenGLProject/OpenGLProject/out/build/x64-debug/lib/libglew32d.lib")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "E:/GitHub Repos/OpenGLProject/OpenGLProject/out/build/x64-debug/lib/libglew32d.lib")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "C:/Users/egden/Desktop/OpenGLProject/OpenGLProject/lib/glew/build/cmake/../../glew.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "E:/GitHub Repos/OpenGLProject/OpenGLProject/lib/glew/build/cmake/../../glew.pc")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   if(CMAKE_INSTALL_CONFIG_NAME MATCHES "^([Dd][Ee][Bb][Uu][Gg]|[Rr][Ee][Ll][Ww][Ii][Tt][Hh][Dd][Ee][Bb][Ii][Nn][Ff][Oo])$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE FILE FILES "C:/Users/egden/Desktop/OpenGLProject/OpenGLProject/out/build/x64-debug/bin/glew32d.pdb")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE FILE FILES "E:/GitHub Repos/OpenGLProject/OpenGLProject/out/build/x64-debug/bin/glew32d.pdb")
   endif()
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/GL" TYPE FILE FILES
-    "C:/Users/egden/Desktop/OpenGLProject/OpenGLProject/lib/glew/build/cmake/../../include/GL/wglew.h"
-    "C:/Users/egden/Desktop/OpenGLProject/OpenGLProject/lib/glew/build/cmake/../../include/GL/glew.h"
-    "C:/Users/egden/Desktop/OpenGLProject/OpenGLProject/lib/glew/build/cmake/../../include/GL/glxew.h"
+    "E:/GitHub Repos/OpenGLProject/OpenGLProject/lib/glew/build/cmake/../../include/GL/wglew.h"
+    "E:/GitHub Repos/OpenGLProject/OpenGLProject/lib/glew/build/cmake/../../include/GL/glew.h"
+    "E:/GitHub Repos/OpenGLProject/OpenGLProject/lib/glew/build/cmake/../../include/GL/glxew.h"
     )
 endif()
 
@@ -58,7 +58,7 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cmake/glew/glew-targets.cmake")
     file(DIFFERENT _cmake_export_file_changed FILES
          "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cmake/glew/glew-targets.cmake"
-         "C:/Users/egden/Desktop/OpenGLProject/OpenGLProject/out/build/x64-debug/glew_build/CMakeFiles/Export/7a894a12241bfddc41ca6be6d0e647bd/glew-targets.cmake")
+         "E:/GitHub Repos/OpenGLProject/OpenGLProject/out/build/x64-debug/glew_build/CMakeFiles/Export/7a894a12241bfddc41ca6be6d0e647bd/glew-targets.cmake")
     if(_cmake_export_file_changed)
       file(GLOB _cmake_old_config_files "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cmake/glew/glew-targets-*.cmake")
       if(_cmake_old_config_files)
@@ -71,22 +71,22 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
     endif()
     unset(_cmake_export_file_changed)
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/glew" TYPE FILE FILES "C:/Users/egden/Desktop/OpenGLProject/OpenGLProject/out/build/x64-debug/glew_build/CMakeFiles/Export/7a894a12241bfddc41ca6be6d0e647bd/glew-targets.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/glew" TYPE FILE FILES "E:/GitHub Repos/OpenGLProject/OpenGLProject/out/build/x64-debug/glew_build/CMakeFiles/Export/7a894a12241bfddc41ca6be6d0e647bd/glew-targets.cmake")
   if(CMAKE_INSTALL_CONFIG_NAME MATCHES "^([Dd][Ee][Bb][Uu][Gg])$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/glew" TYPE FILE FILES "C:/Users/egden/Desktop/OpenGLProject/OpenGLProject/out/build/x64-debug/glew_build/CMakeFiles/Export/7a894a12241bfddc41ca6be6d0e647bd/glew-targets-debug.cmake")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/glew" TYPE FILE FILES "E:/GitHub Repos/OpenGLProject/OpenGLProject/out/build/x64-debug/glew_build/CMakeFiles/Export/7a894a12241bfddc41ca6be6d0e647bd/glew-targets-debug.cmake")
   endif()
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/glew" TYPE FILE FILES
-    "C:/Users/egden/Desktop/OpenGLProject/OpenGLProject/lib/glew/build/cmake/glew-config.cmake"
-    "C:/Users/egden/Desktop/OpenGLProject/OpenGLProject/lib/glew/build/cmake/CopyImportedTargetProperties.cmake"
+    "E:/GitHub Repos/OpenGLProject/OpenGLProject/lib/glew/build/cmake/glew-config.cmake"
+    "E:/GitHub Repos/OpenGLProject/OpenGLProject/lib/glew/build/cmake/CopyImportedTargetProperties.cmake"
     )
 endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
 if(CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "C:/Users/egden/Desktop/OpenGLProject/OpenGLProject/out/build/x64-debug/glew_build/install_local_manifest.txt"
+  file(WRITE "E:/GitHub Repos/OpenGLProject/OpenGLProject/out/build/x64-debug/glew_build/install_local_manifest.txt"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()

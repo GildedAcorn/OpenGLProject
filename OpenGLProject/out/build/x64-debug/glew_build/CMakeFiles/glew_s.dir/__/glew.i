@@ -1,4 +1,4 @@
-#line 1 "C:\\Users\\egden\\Desktop\\OpenGLProject\\OpenGLProject\\lib\\glew\\build\\glew.rc"
+#line 1 "E:\\GitHub Repos\\OpenGLProject\\OpenGLProject\\lib\\glew\\build\\glew.rc"
 
 #line 1 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.26100.0\\um\\windows.h"
 #line 1 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.26100.0\\shared\\winapifamily.h"
@@ -9369,21 +9369,21 @@
 
 #line 276 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.26100.0\\um\\windows.h"
 
-#line 3 "C:\\Users\\egden\\Desktop\\OpenGLProject\\OpenGLProject\\lib\\glew\\build\\glew.rc"
+#line 3 "E:\\GitHub Repos\\OpenGLProject\\OpenGLProject\\lib\\glew\\build\\glew.rc"
 
 
 
 
 
 
-#line 10 "C:\\Users\\egden\\Desktop\\OpenGLProject\\OpenGLProject\\lib\\glew\\build\\glew.rc"
+#line 10 "E:\\GitHub Repos\\OpenGLProject\\OpenGLProject\\lib\\glew\\build\\glew.rc"
 
 
 
 
 
 
-#line 17 "C:\\Users\\egden\\Desktop\\OpenGLProject\\OpenGLProject\\lib\\glew\\build\\glew.rc"
+#line 17 "E:\\GitHub Repos\\OpenGLProject\\OpenGLProject\\lib\\glew\\build\\glew.rc"
 
 
 
@@ -9397,13 +9397,13 @@ FILEFLAGSMASK 0x0000003FL
 FILEFLAGS 0x00000001L
 
 
-#line 31 "C:\\Users\\egden\\Desktop\\OpenGLProject\\OpenGLProject\\lib\\glew\\build\\glew.rc"
+#line 31 "E:\\GitHub Repos\\OpenGLProject\\OpenGLProject\\lib\\glew\\build\\glew.rc"
 FILEOS 0x00000004L
 
 FILETYPE 0x00000007L
 
 
-#line 37 "C:\\Users\\egden\\Desktop\\OpenGLProject\\OpenGLProject\\lib\\glew\\build\\glew.rc"
+#line 37 "E:\\GitHub Repos\\OpenGLProject\\OpenGLProject\\lib\\glew\\build\\glew.rc"
 FILESUBTYPE 0x00000000L
 BEGIN
     BLOCK "StringFileInfo"

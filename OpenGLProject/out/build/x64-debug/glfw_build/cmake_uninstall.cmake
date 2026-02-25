@@ -1,9 +1,9 @@
 
-if (NOT EXISTS "C:/Users/egden/Desktop/OpenGLProject/OpenGLProject/out/build/x64-debug/glfw_build/install_manifest.txt")
-    message(FATAL_ERROR "Cannot find install manifest: \"C:/Users/egden/Desktop/OpenGLProject/OpenGLProject/out/build/x64-debug/glfw_build/install_manifest.txt\"")
+if (NOT EXISTS "E:/GitHub Repos/OpenGLProject/OpenGLProject/out/build/x64-debug/glfw_build/install_manifest.txt")
+    message(FATAL_ERROR "Cannot find install manifest: \"E:/GitHub Repos/OpenGLProject/OpenGLProject/out/build/x64-debug/glfw_build/install_manifest.txt\"")
 endif()
 
-file(READ "C:/Users/egden/Desktop/OpenGLProject/OpenGLProject/out/build/x64-debug/glfw_build/install_manifest.txt" files)
+file(READ "E:/GitHub Repos/OpenGLProject/OpenGLProject/out/build/x64-debug/glfw_build/install_manifest.txt" files)
 string(REGEX REPLACE "\n" ";" files "${files}")
 
 foreach (file ${files})
