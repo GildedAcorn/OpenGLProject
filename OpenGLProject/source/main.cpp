@@ -10,6 +10,7 @@ int main()
 	// Check to see if glfw lib is initialised
 	if (!glfwInit())
 	{
+		std::cout << "ERROR: GLFW NOT INITIALISED!" << std::endl;
 		return -1;
 	}
 
@@ -48,10 +49,14 @@ int main()
 	std::string vertexShaderSource = R"(
 		#version 330 core
 		layout (location = 0) in vec3 position;
+		layout (location = 1) in vec3 color;
+
+		out vec3 vColor;
 
 		void main()
 		{
 			gl_Position = vec4(position.x, position.y, position.z, 1.0);
+			vColor = color;
 		}
 	)";
 
@@ -80,10 +85,12 @@ int main()
 	std::string fragmentShaderSource = R"(
 		#version 330 core
 		out vec4 FragColor;
+		in vec3 vColor;
+		uniform vec4 uColor;	
 
 		void main()
 		{
-			FragColor = vec4(1.0, 0.0, 0.0, 1.0);
+			FragColor = vec4(vColor, 1.0) * uColor;
 		}
 	)";
 
@@ -129,12 +136,34 @@ int main()
 	glDeleteShader(fragmentShader);
 
 	// ---=== VERTICES FOR SHAPES ===---
-	// Vertices locations for drawing a triangle
+	// Vertex locations for TRIANGLE
+	// First 3 = vertices location
+	// Second 3 = Color attributes RGB
+	/*std::vector<float> vertices =
+	{
+		0.0f, 0.5f, 0.0f, 1.0f, 0.0f, 0.0f,
+		-0.5f, -0.5f, 0.0f, 0.0f, 1.0f, 0.0f,
+		0.5f, -0.5f, 0.0f, 0.0f, 0.0f, 1.0f,
+
+	};*/
+	// Vertex locations for SQUARE
+	// First 4 = vertex locations
+	// Second 3 = color attribute RGB
 	std::vector<float> vertices =
 	{
-		0.0f, 0.5f, 0.0f,
-		-0.5f, -0.5f, 0.0f,
-		0.5f, -0.5f, 0.0f,
+		// vertex 		  // RGB 
+		0.5f, 0.5f, 0.0f, 1.0f, 0.0f, 0.0f,
+		-0.5f, 0.5f, 0.0f, 1.0f, 1.0f, 1.0f,
+		-0.5f, -0.5f, 0.0f, 0.0f, 0.0f, 1.0f,
+		0.5f, -0.5f, 0.0f, 0.0f, 1.0f, 0.0f,
+	};
+
+	// Create a new vector to store the indices of the SQUARE vertices to allow reuse of information
+	std::vector<unsigned int> indices =
+	{
+		// Order to draw triangles 
+		0, 1, 2,
+		0, 2, 3,
 	};
 
 	// ---=== SEND DATA TO GPU ===---
@@ -149,6 +178,17 @@ int main()
 	// Clear buffer
 	glBindBuffer(GL_ARRAY_BUFFER, 0);
 
+	// Create element buffer object to store indices 
+	GLuint ebo;
+	// Create 1 buffer to assign indices values to memory
+	glGenBuffers(1, &ebo);
+	// Assign buffer into memory
+	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, ebo);
+	// Send data to GPU memory
+	glBufferData(GL_ELEMENT_ARRAY_BUFFER, indices.size() * sizeof(unsigned int), indices.data(), GL_STATIC_DRAW);
+	// Clear buffer
+	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
+
 	// Create vertex array object to store vertex bindings
 	GLuint vao = 0;
 	// Assign vertices 
@@ -157,14 +197,23 @@ int main()
 	glBindVertexArray(vao);
 	// Bind buffer (DO THIS BEFORE YOU PUT SOME KIND OF DATA IN TO AVOID STARING AT THE SAME THING FOR AGES!!!!)
 	glBindBuffer(GL_ARRAY_BUFFER, vbo);
-	// Specify how to interpret the data
-	glVertexAttribPointer(0, 3, GL_FLOAT, false, 3 * sizeof(float), (void*)0);
+	// Bind buffer for the ebo as well for complex shapes
+	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, ebo);
+	// Specify how to interpret the data (index, num of values, normalization, stride (size of 1 (3 values of vertex location, 3 for RGB)
+	glVertexAttribPointer(0, 3, GL_FLOAT, false, 6 * sizeof(float), (void*)0);
 	// Enable attribute array
 	glEnableVertexAttribArray(0);
+	// Enable VAO to take in RBG values in the vertices array
+	glVertexAttribPointer(1, 3, GL_FLOAT, false, 6 * sizeof(float), (void*)(3 * sizeof(float)));
+	// Enable to array
+	glEnableVertexAttribArray(1);
 	// Unbind buffer
 	glBindBuffer(GL_ARRAY_BUFFER, 0);
 	// Unbind vertex array
 	glBindVertexArray(0);
+
+	// Get the uniform
+	GLint uColorloc = glGetUniformLocation(shaderProgram, "uColor");
 
 
 
@@ -179,10 +228,12 @@ int main()
 		// ---=== DRAW TRIANGLE ===---
 		// Assign shader program to use
 		glUseProgram(shaderProgram);
+		// Set the uniform color
+		glUniform4f(uColorloc, 0.0f, 1.0f, 0.0f, 1.0f);
 		// Bind vertex array
 		glBindVertexArray(vao);
 		// Draw the triangle
-		glDrawArrays(GL_TRIANGLES, 0, 3);
+		glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
 
 		// Need to call so that back and front buffer are swapped so we can see the things we want rendered
 		glfwSwapBuffers(window);
